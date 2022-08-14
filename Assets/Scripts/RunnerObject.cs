@@ -31,12 +31,12 @@ public class RunnerObject : MonoBehaviour
             {
                 if(transform.eulerAngles.y==0)
                 {
-                   transform.rotation=Quaternion.Euler(Vector3.up*90);
-                   transform.Translate(transform.forward * runSpeed * Time.fixedDeltaTime);
+                   transform.rotation=Quaternion.Euler(Vector3.up*90* Mathf.Sign(transform.position.x));
+                  // transform.Translate(Vector3.forward,space);
                 }
                 //return;
             }
-            transform.Translate(transform.forward * runSpeed * Time.fixedDeltaTime);
+            transform.Translate(transform.forward * runSpeed * Time.fixedDeltaTime,Space.World);
         }
     }
 }
