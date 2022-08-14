@@ -49,6 +49,7 @@ public class StackPlayer : MonoBehaviour
     {
         if (other.CompareTag("Stack"))
         {
+            UiManager.instance.coinsTxt.text=stacks.Count.ToString();
             other.GetComponent<RunnerObject>().isRun = false;
             other.GetComponent<RunnerObject>().isCatch = true;
             other.GetComponent<RunnerObject>().OnCatch.Invoke();

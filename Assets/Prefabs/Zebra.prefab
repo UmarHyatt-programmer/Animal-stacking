@@ -130,6 +130,7 @@ MonoBehaviour:
   runSpeedMax: 20
   runSpeed: 10
   isRun: 1
+  isCatch: 0
 --- !u!114 &7149073630620360723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -782,7 +783,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &519340417875148520
 Transform:
   m_ObjectHideFlags: 0

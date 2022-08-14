@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class UiManager : MonoBehaviour
@@ -18,6 +19,9 @@ public class UiManager : MonoBehaviour
     }
     #endregion
     public GameObject settingPnl,playButton;
+    public Text coinsTxt,gemsTxt;
+    public Transform gemPrefab;
+    public Transform gemStartPoint,gemPoint;
     private void Start() {
         Time.timeScale=0;
     }
@@ -30,6 +34,18 @@ public class UiManager : MonoBehaviour
         else
         {
             settingPnl.SetActive(true);
+        }
+    }
+    private void Update() 
+    {
+        if(gemPrefab.gameObject.activeInHierarchy)
+        {
+            if(gemPrefab.position.x==gemPoint.position.x)
+            {
+                gemPrefab.position=gemStartPoint.position;
+                gemPrefab.gameObject.SetActive(false);
+            }
+            gemPrefab.position=Vector3.MoveTowards(gemPrefab.position,gemPoint.position,10);
         }
     }
     public void StartButton()
