@@ -32863,6 +32863,10 @@ PrefabInstance:
       propertyPath: animalFarwardSpeed
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 4836166815888902926, guid: ddf6ee11f34f45d45aa125aa73426337, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4836436810749972967, guid: ddf6ee11f34f45d45aa125aa73426337, type: 3}
       propertyPath: m_Name
       value: Lion

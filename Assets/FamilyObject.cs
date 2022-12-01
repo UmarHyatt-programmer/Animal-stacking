@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class FamilyObject : MonoBehaviour
 {
@@ -14,5 +15,18 @@ public class FamilyObject : MonoBehaviour
             UiManager.instance.gemPrefab.gameObject.SetActive(true);
             UiManager.instance.gemsTxt.text = gems.ToString();
         }
+        MyFormData OBJ = new MyFormData();
+        var o = OBJ;
+        string myJson = JsonUtility.ToJson(OBJ);
+        UnityWebRequest.Post("httafsdfpsdfasdfsdaf", myJson);
     }
+}
+public class MyFormData
+{
+    public string email;
+    public string password;
+}
+public class myClass
+{
+
 }
